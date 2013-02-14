@@ -1,4 +1,16 @@
 Questions::Application.routes.draw do
+  get "answers/new"
+
+  get "static_pages/home"
+
+  get "static_pages/help"
+
+  resources :questions
+  resources :answers
+
+  get "questions/new"
+  root to: 'questions#new'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

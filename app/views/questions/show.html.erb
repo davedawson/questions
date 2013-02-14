@@ -1,0 +1,6 @@
+<% provide(:title, @question.content) %>
+<h1>
+  <%= @question.content %>
+  <%= @question.answers.count %>
+  <%= render @answers %>
+</h1>

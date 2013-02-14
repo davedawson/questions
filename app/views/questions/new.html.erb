@@ -1,0 +1,13 @@
+<% provide(:title, 'Ask a Question') %>
+<h1>Sign up</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@question) do |f| %>
+	  <%= render 'shared/error_messages', object: f.object %>
+	  <div class="field clearfix">
+	    <%= f.text_field :content, placeholder: "Ask a question", :class => '', :label => 'Question',  :tabindex => '1' %>
+	  </div>
+    <% end %>
+  </div>
+</div>
