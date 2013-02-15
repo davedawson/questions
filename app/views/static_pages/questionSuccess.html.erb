@@ -1,6 +1,5 @@
 <% provide(:title, @question.content) %>
 <h1><%= @question.content %></h1>
-<h2>Unique URL: <%= URI(request.referer).path %></h2>
 <p><%= @question.answers.count %> answers</p>
  
 <%= render @answers %>

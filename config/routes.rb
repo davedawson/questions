@@ -2,12 +2,13 @@ Questions::Application.routes.draw do
   get "answers/new"
 
   get "static_pages/home"
-
+  
   get "static_pages/help"
+  get "static_pages/questionSuccess"
 
   resources :questions
   resources :answers
-
+  match '/quest',  :to => 'questions#show'
   get "questions/new"
   root to: 'questions#new'
 
